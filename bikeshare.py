@@ -86,7 +86,7 @@ def raw_rows(start):
     """Function to print defined rows of raw data from a DataFrame
        Input: start index
        Output: start index increased by 5"""
-
+    end = start + 5
     print('\nHere are the trips {} to {}.\n'.format(start + 1, end))
     print(df[start:end])
     start += 5
