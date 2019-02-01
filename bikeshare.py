@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-#Dictionary for loading the .csv files (The paths refer to my local folder structure)
+#Dictionary for loading the .csv files
 
 load_files = {1: 'chicago.csv',
               2: 'new_york_city.csv',
@@ -84,8 +84,8 @@ def check_input(options):
 
 def raw_rows(start, end):
     """Function to print defined rows of raw data from a DataFrame
-       Input: start and end index
-       Output: start and end index increased by 5"""
+       Input: start index
+       Output: start index increased by 5"""
     print('\nHere are the trips {} to {}.\n'.format(start + 1, end))
     print(df[start:end])
     start += 5
@@ -181,3 +181,4 @@ while again == 1:
 
 #Step 4: User selection to end or restart
     again = check_input(prompts['start_over'])
+
