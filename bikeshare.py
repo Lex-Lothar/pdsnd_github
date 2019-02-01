@@ -94,7 +94,9 @@ def raw_rows(start):
 
 #Loop to restart if requested at the end of the process
 again = 1
-while again == 1:
+while True:
+    if again == 2:
+        break
 
 #Step 1: Define city based on user input
     city = check_input(prompts['cities'])
