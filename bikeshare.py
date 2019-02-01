@@ -82,15 +82,15 @@ def check_input(options):
             print(prompts['except_error'].format(options[3]))
     return user_input
 
-def raw_rows(start, end):
+def raw_rows(start):
     """Function to print defined rows of raw data from a DataFrame
        Input: start and end index
        Output: start and end index increased by 5"""
+    end = start + 5
     print('\nHere are the trips {} to {}.\n'.format(start + 1, end))
     print(df[start:end])
     start += 5
-    end += 5
-    return start, end
+    return start
 
 #Loop to restart if requested at the end of the process
 again = 1
@@ -173,11 +173,11 @@ while again == 1:
         print(year_txt.format(avg_y[0], avg_y[1]))
          
 #Step 3: Raw data is printed based on user preference
-    start, end = 0, 5   
-    if check_input(prompts['raw_1']) == 1 and end < df['Start Time'].count():
-        start, end = raw_rows(start, end)              
+    start = 0   
+    if check_input(prompts['raw_1']) == 1 and start + 5 < df['Start Time'].count():
+        start = raw_rows(start)              
         while check_input(prompts['raw_2']) == 1:            
-            start, end = raw_rows(start, end)   
+            start = raw_rows(start)   
 
 #Step 4: User selection to end or restart
     again = check_input(prompts['start_over'])
