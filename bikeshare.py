@@ -99,6 +99,7 @@ while True:
         break
 
 #Step 1: Define city based on user input
+    print('\n\n' + ' '*7 + '#'*34 + '\n\n' + ' '*7 + 'Welcome to Bikeshare Data Analyzer\n\n' + ' '*7 + '#'*34 + '\n\n\n\nYou\'ll be good to go after setting a few filters')
     city = check_input(prompts['cities'])
 
     #Create DataFrame based on user selection. Add required columns.
