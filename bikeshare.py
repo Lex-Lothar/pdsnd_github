@@ -84,8 +84,8 @@ def check_input(options):
 
 def raw_rows(start, end):
     """Function to print defined rows of raw data from a DataFrame
-       Input: start and end index
-       Output: start and end index increased by 5"""
+       Input: start index
+       Output: start index increased by 5"""
     print('\nHere are the trips {} to {}.\n'.format(start + 1, end))
     print(df[start:end])
     start += 5
