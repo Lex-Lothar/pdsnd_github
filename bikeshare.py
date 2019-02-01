@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-#Dictionary for loading the .csv files (The paths refer to my local folder structure)
+#Dictionary for loading the .csv files
 
 load_files = {1: 'chicago.csv',
               2: 'new_york_city.csv',
